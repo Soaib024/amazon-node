@@ -1,0 +1,37 @@
+{
+  "name": "amazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startLocal": "nodemon app.js",
+    "start": "nodemon app.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-validator": "^6.11.1",
+    "jsonwebtoken": "^8.5.1",
+    "lorem-ipsum": "^2.0.3",
+    "micro": "^9.3.4",
+    "mongodb": "^3.6.8",
+    "mongoose": "^5.12.13",
+    "mongoose-random": "^0.1.1",
+    "nodemon": "^2.0.7",
+    "stripe": "^8.161.0",
+    "validator": "^13.6.0"
+  },
+  "engines": {
+    "node": "16.3.0"
+  }
+}
