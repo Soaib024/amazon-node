@@ -7,7 +7,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const router = express.Router();
 
-const endpointSecret = "whsec_QTaIPuFfAt78pxDaLhcL8IK9wei7Ihsx";
+const endpointSecret = "whsec_GgBE0lluak8DxJamIBhsvbJqfGHb4qcI";
 
 const fulfillOrder = async (session) => {
   const orderInfo = {
