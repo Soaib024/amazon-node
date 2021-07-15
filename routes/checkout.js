@@ -42,7 +42,6 @@ router.post("/", async (req, res) => {
     },
   });
 
-  console.log(session)
 
   const order = await Order.create({
     userId: user._id,

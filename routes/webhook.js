@@ -10,15 +10,16 @@ const router = express.Router();
 const endpointSecret = "whsec_GgBE0lluak8DxJamIBhsvbJqfGHb4qcI";
 
 const fulfillOrder = async (session) => {
+ 
   const orderInfo = {
     payment_status: session.payment_status,
-    shipping_address: session.shipping_address,
+    shipping_address: JSON.stringify(session.shipping.address),
     name: session.shipping.name,
   };
 
   const order = await Order.findOneAndUpdate({sessionId: session.id}, orderInfo)
 
-  console.log("Fulfilling order", order);
+  //console.log("Fulfilling order", order);
 };
 
 router.post("/",express.raw({ type: "application/json" }),(req, res) => {
